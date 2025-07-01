@@ -10,8 +10,12 @@ export default defineConfig({
     ],
     build: {
         outDir: 'dist',
-        assetsDir: '',
-        manifest: true,
+        assetsDir: 'assets',
+        rollupOptions: {
+            input: {
+                app: './resources/js/app.js'
+            }
+        }
     },
     server: {
         hmr: {

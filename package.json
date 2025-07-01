@@ -4,7 +4,8 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "vercel-build": "vite build && cp index.html dist/"
     },
     "devDependencies": {
         "@tailwindcss/aspect-ratio": "^0.4.2",
