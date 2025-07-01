@@ -13,6 +13,7 @@ export default {
         'cabinet': ['"Cabinet Grotesk"', 'sans-serif']
       },
       colors: {
+        'primary': '#00f2fe',
         'neon': {
           purple: '#B026FF',
           blue: '#4D4DFF',
