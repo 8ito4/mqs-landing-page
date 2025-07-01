@@ -8,6 +8,11 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    build: {
+        outDir: 'dist',
+        assetsDir: '',
+        manifest: true,
+    },
     server: {
         hmr: {
             host: 'localhost',
