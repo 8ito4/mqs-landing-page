@@ -1,13 +1,16 @@
 {
     "version": 2,
     "framework": null,
-    "functions": {
-        "api/index.php": {
-            "runtime": "vercel-php@0.5.2",
-            "memory": 1024,
-            "maxDuration": 60
+    "builds": [
+        {
+            "src": "api/index.php",
+            "use": "vercel-php@0.5.2"
+        },
+        {
+            "src": "public/**",
+            "use": "@vercel/static"
         }
-    },
+    ],
     "routes": [
         {
             "src": "/(css|js|images|fonts|build)/(.*)",
@@ -19,16 +22,6 @@
         }
     ],
     "outputDirectory": "dist",
-    "builds": [
-        {
-            "src": "api/index.php",
-            "use": "vercel-php@0.5.2"
-        },
-        {
-            "src": "public/**",
-            "use": "@vercel/static"
-        }
-    ],
     "env": {
         "APP_NAME": "MQS",
         "APP_ENV": "production",
