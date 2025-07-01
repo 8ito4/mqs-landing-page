@@ -1,24 +1,13 @@
 {
     "version": 2,
+    "buildCommand": "./build.sh",
+    "outputDirectory": "dist",
     "framework": null,
-    "builds": [
-        {
-            "src": "api/index.php",
-            "use": "vercel-php@0.4.0",
-            "config": {
-                "php.ini": {
-                    "extension_dir": "/tmp",
-                    "extension": [
-                        "openssl.so"
-                    ]
-                }
-            }
-        },
-        {
-            "src": "public/**",
-            "use": "@vercel/static"
+    "functions": {
+        "api/*.php": {
+            "runtime": "vercel-php@0.4.0"
         }
-    ],
+    },
     "routes": [
         {
             "src": "/(css|js|images|fonts|build)/(.*)",
@@ -29,7 +18,6 @@
             "dest": "/api/index.php"
         }
     ],
-    "outputDirectory": "dist",
     "env": {
         "APP_NAME": "MQS",
         "APP_ENV": "production",
@@ -47,9 +35,9 @@
         "VIEW_COMPILED_PATH": "/tmp/views",
         "SSR_TEMP_PATH": "/tmp/ssr",
         "NODE_PATH": "node",
-        "PHP_VERSION": "8.2",
+        "PHP_VERSION": "7.4",
         "COMPOSER_ALLOW_SUPERUSER": "1",
         "COMPOSER_HOME": "/tmp/.composer",
-        "COMPOSER_VENDOR_DIR": "/tmp/vendor"
+        "COMPOSER_VENDOR_DIR": "vendor"
     }
 } 
