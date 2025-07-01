@@ -4,7 +4,15 @@
     "builds": [
         {
             "src": "api/index.php",
-            "use": "vercel-php@0.5.2"
+            "use": "vercel-php@0.4.0",
+            "config": {
+                "php.ini": {
+                    "extension_dir": "/tmp",
+                    "extension": [
+                        "openssl.so"
+                    ]
+                }
+            }
         },
         {
             "src": "public/**",
@@ -39,6 +47,9 @@
         "VIEW_COMPILED_PATH": "/tmp/views",
         "SSR_TEMP_PATH": "/tmp/ssr",
         "NODE_PATH": "node",
-        "PHP_VERSION": "8.2"
+        "PHP_VERSION": "8.2",
+        "COMPOSER_ALLOW_SUPERUSER": "1",
+        "COMPOSER_HOME": "/tmp/.composer",
+        "COMPOSER_VENDOR_DIR": "/tmp/vendor"
     }
 } 
