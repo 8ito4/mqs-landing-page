@@ -486,13 +486,14 @@
                     <!-- Placeholder do Vídeo -->
                     <div class="max-w-4xl mx-auto mb-12">
                         <div class="relative w-full bg-[rgba(0,242,254,0.1)] rounded-2xl overflow-hidden" style="padding-top: 56.25%;">
-                            <!-- Conteúdo do placeholder -->
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <svg class="w-20 h-20 text-[#00f2fe]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
+                            <iframe 
+                                class="absolute inset-0 w-full h-full"
+                                src="https://www.youtube.com/embed/H63L5FChEv8"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
                         </div>
                     </div>
 
