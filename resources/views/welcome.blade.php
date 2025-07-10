@@ -85,11 +85,11 @@
             width: 100%;
             height: 100%;
             background-image: 
-                linear-gradient(rgba(0, 242, 254, 0.12) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 242, 254, 0.12) 1px, transparent 1px);
+                linear-gradient(rgba(0, 242, 254, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 242, 254, 0.05) 1px, transparent 1px);
             background-size: 40px 40px;
             z-index: 1;
-            opacity: 0.4;
+            opacity: 1;
             pointer-events: none;
         }
 
